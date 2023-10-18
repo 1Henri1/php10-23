@@ -14,10 +14,10 @@ include_once("php.php");
         Valor da conta: R$ <input type="text" name="valor_da_conta"><br>
         Selecione a porcentagem da gorjeta:
         <select name="porc">
-            <option value="10">10%</option>
-            <option value="8">8%</option>
-            <option value="5">5%</option>
-            <option value="2">2%</option>
+            <option value="10">Excelente-10%</option>
+            <option value="8">Ótimo-8%</option>
+            <option value="5">Bom-5%</option>
+            <option value="2">Péssimo-2%</option>
         </select><br>
 
         <button type="submit" value="Calcular Gorjeta">Calcular</button><br>
