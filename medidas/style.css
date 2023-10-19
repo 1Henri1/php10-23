@@ -12,17 +12,21 @@ input{
 	border-radius: 10px;
 	width: 240px;
 	height: 20px;
+	margin: auto;
+	padding-left : 10px;
 }
 button{
 	color: #000;
 	background-color: #00ffff;
-	height: 25px;
+	height: 35px;
 	width: 240px;
 	border-radius: 10px;
+	font-size: 15px;
 }
 select{
 	color: #000;
 	height: 25px;
 	width: 240px;
 	border-radius: 10px;
+	padding-left: 10px;
 }

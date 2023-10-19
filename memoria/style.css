@@ -1,0 +1,35 @@
+*{
+    background: #efefef;
+    font-family:verdana;
+}
+.carta {
+            width: 13vw;
+            height: 13vw;
+            background-image: url(verso.jpg);
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position: center;
+            margin: 1vw;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .carta img {
+            width: 13vw;
+            height: 13vw;
+            display: none;
+        }
+
+        .virada img {
+            display: block;
+        }
+
+        .title{
+            text-align: center;
+        }
+        #tabuleiro{
+            text-align: center;
+        }
