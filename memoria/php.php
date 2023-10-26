@@ -1,4 +1,22 @@
 <?php 
+class Logar{
+        private $nome;
+        private $senha;
+
+        public function __construct($nome, $senha) {
+            $this->nome = $nome;
+            $this->senha = $senha;
+        }
+
+         public function getNome() {
+            return $this->nome;
+        }
+
+        public function getSenha() {
+            return $this->senha;
+        }
+
+    }
  class Carta {
         private $id;
         private $imagem;
@@ -20,7 +38,7 @@ class JogoMemoria {
         private $cartas = [];
 
         public function __construct() {
-            $imagens = ["imagem1", "imagem2", "imagem3", "imagem4", "bang", "banguela"];
+            $imagens = [ "imagem2", "imagem3", "imagem4", "bang", "banguela"];
             $this->criarCartas($imagens);
         }
 

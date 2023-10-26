@@ -3,8 +3,8 @@
     font-family:verdana;
 }
 .carta {
-            width: 13vw;
-            height: 13vw;
+            width: 15vw;
+            height: 15vw;
             background-image: url(verso.jpg);
             background-repeat: no-repeat;
             background-size: 200%;
@@ -18,8 +18,8 @@
         }
 
         .carta img {
-            width: 13vw;
-            height: 13vw;
+            width: 15vw;
+            height: 15vw;
             display: none;
         }
 

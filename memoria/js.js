@@ -1,6 +1,7 @@
  let cartasViradas = [];
         let paresEncontrados = 0;
         let tentativas = 0;
+        let vitorias = 0;
 
         function virarCarta(id) {
             let carta = document.getElementById(id);
@@ -24,8 +25,10 @@
                         cartasViradas = [];
                         paresEncontrados++;
 
-                        if (paresEncontrados === 6) {
+                        if (paresEncontrados === 5) {
                             alert('Você ganhou! Todas as cartas foram encontradas em ' + tentativas + ' tentativas.');
+                            vitorias++;
+                            document.getElementById('vitorias').textContent = vitorias;
                         }
                     } else {
                         setTimeout(function() {
@@ -48,6 +51,10 @@
                     }
                     tentativas++;
                     document.getElementById('tentativas').textContent = tentativas;
+                    if(tentativas === 13){
+                       alert('Você perdeu! ultrapassou 12 tentativas '); 
+                       reiniciarJogo();
+                    }
                 }
             }
         }
