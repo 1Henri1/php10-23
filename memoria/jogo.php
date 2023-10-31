@@ -1,9 +1,6 @@
 <?php 
     include_once("php.php");
-        $nome = isset($_POST["nome"]);
-        $senha = isset($_POST["senha"]);
-        ech
- ?>
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +11,11 @@
 </head>
 <body>
     <div class="title">
-        <h3>Henrique Barbosa RM22687 && Henzo Possebon RM22706</h3>
+        
+        <?php
+          echo $_POST['nome'];  
+        ?>    
+        </h3>
     <h1>Jogo da Memória</h1>
     <div>
         Tentativas: <span id="tentativas">0</span><br>
