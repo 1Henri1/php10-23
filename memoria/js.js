@@ -2,6 +2,7 @@
         let paresEncontrados = 0;
         let tentativas = 0;
         let vitorias = 0;
+        let derrotas = 0;
 
         function virarCarta(id) {
             let carta = document.getElementById(id);
@@ -20,6 +21,7 @@
 
                     let img1 = carta1.querySelector('img').getAttribute('src');
                     let img2 = carta2.querySelector('img').getAttribute('src');
+                    tentativas++;
 
                     if (img1 === img2) {
                         cartasViradas = [];
@@ -29,8 +31,15 @@
                             alert('Você ganhou! Todas as cartas foram encontradas em ' + tentativas + ' tentativas.');
                             vitorias++;
                             document.getElementById('vitorias').textContent = vitorias;
-                        }
+                            reiniciarJogo();
+                    }else{
+                    if(tentativas === 10){
+                       alert('Você perdeu! ultrapassou 10 tentativas '); 
+                       reiniciarJogo();}}
                     } else {
+                        if(tentativas === 10){
+                       alert('Você perdeu! ultrapassou 10 tentativas '); 
+                       reiniciarJogo();}
                         setTimeout(function() {
                             carta1.classList.remove('virada');
                             carta2.classList.remove('virada');
@@ -48,18 +57,19 @@
 
                             cartasViradas = [];
                         }, 1000);
+                        
                     }
-                    tentativas++;
                     document.getElementById('tentativas').textContent = tentativas;
-                    if(tentativas === 13){
-                       alert('Você perdeu! ultrapassou 12 tentativas '); 
-                       reiniciarJogo();
-                    }
+                    
                 }
             }
         }
 
         function reiniciarJogo() {
+            if (tentativas>=1 && paresEncontrados !=5) {
+                derrotas++;
+                document.getElementById('derrotas').textContent = derrotas;
+            }
             let cartas = document.querySelectorAll('.carta');
             for (let i = 0; i < cartas.length; i++) {
                 cartas[i].classList.remove('virada');

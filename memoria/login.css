@@ -1,0 +1,26 @@
+*{
+	background-color: #7FFFD4;
+}
+.log{
+	margin: auto;
+	color: #f0f;
+	margin-top: 20vh;
+	width: 50vw;
+	height: 50vh;
+	text-align: center;
+	border: groove;
+}
+.input-login{
+	margin-top: 10vw;
+	border-radius: 15px;
+	background-color: #40E0D0;
+	width: 200px;
+	height: 25px;
+}
+.input-entrar{
+	margin-top: 10px;
+	border-radius: 15px;
+	background-color:#20B2AA;
+	width: 100px;
+	height: 30px;
+}

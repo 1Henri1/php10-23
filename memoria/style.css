@@ -1,5 +1,5 @@
 *{
-    background: #efefef;
+    background: #B0C4DE;
     font-family:verdana;
 }
 .carta {
@@ -32,4 +32,8 @@
         }
         #tabuleiro{
             text-align: center;
+        }
+        .titulo{
+            font-size: 25px;
+            color: #000080;
         }
