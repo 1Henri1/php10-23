@@ -7,6 +7,12 @@
 	<title>login</title>
 </head>
 <body>	
+	<?php if(isset($_SESSION)){ 
+		session_start(); 
+		$_SESSION['vitorias'] = 0;
+		$_SESSION['derrotas'] = 0;
+		$_SESSION['tentativas'] = 0;
+		}?>
 	<h1 style="text-align: center;">DIGITE UM NOME E COMECE A JOGAR AGORA</h1>
 
 	<div class="log">

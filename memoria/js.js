@@ -1,8 +1,12 @@
- let cartasViradas = [];
+ let cartasViradas = [];  
+        sessionStorage.setItem('vitorias', 0);
+        sessionStorage.setItem('derrotas', sessionStorage.getItem('derrotas'));
+
+        const vitorias = sessionStorage.getItem('vitorias');
+        const derrotas = sessionStorage.getItem('derrotas');  
+        if (sessionStorage.getItem('derrotas')>0){document.getElementById('derrotas').textContent = sessionStorage.getItem('derrotas');}else{ sessionStorage.setItem('derrotas', 0);}
         let paresEncontrados = 0;
         let tentativas = 0;
-        let vitorias = 0;
-        let derrotas = 0;
 
         function virarCarta(id) {
             let carta = document.getElementById(id);
@@ -67,8 +71,8 @@
 
         function reiniciarJogo() {
             if (tentativas>=1 && paresEncontrados !=5) {
-                derrotas++;
-                document.getElementById('derrotas').textContent = derrotas;
+                sessionStorage.setItem('derrotas', parseInt(sessionStorage.getItem('derrotas'))+1);
+                document.getElementById('derrotas').textContent = sessionStorage.getItem('derrotas');
             }
             let cartas = document.querySelectorAll('.carta');
             for (let i = 0; i < cartas.length; i++) {
