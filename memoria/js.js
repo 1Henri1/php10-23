@@ -1,10 +1,15 @@
  let cartasViradas = [];  
-        sessionStorage.setItem('vitorias', 0);
+        sessionStorage.setItem('vitorias', sessionStorage.getItem('vitorias'));
         sessionStorage.setItem('derrotas', sessionStorage.getItem('derrotas'));
 
         const vitorias = sessionStorage.getItem('vitorias');
         const derrotas = sessionStorage.getItem('derrotas');  
-        if (sessionStorage.getItem('derrotas')>0){document.getElementById('derrotas').textContent = sessionStorage.getItem('derrotas');}else{ sessionStorage.setItem('derrotas', 0);}
+        if (sessionStorage.getItem('derrotas')>0)
+            {document.getElementById('derrotas').textContent = sessionStorage.getItem('derrotas');}
+        else{ sessionStorage.setItem('derrotas', 0);}
+        if (sessionStorage.getItem('vitorias')>0)
+            {document.getElementById('vitorias').textContent = sessionStorage.getItem('vitorias');}
+        else{ sessionStorage.setItem('vitorias', 0);}
         let paresEncontrados = 0;
         let tentativas = 0;
 
@@ -33,8 +38,8 @@
 
                         if (paresEncontrados === 5) {
                             alert('Você ganhou! Todas as cartas foram encontradas em ' + tentativas + ' tentativas.');
-                            vitorias++;
-                            document.getElementById('vitorias').textContent = vitorias;
+                            sessionStorage.setItem('vitorias', parseInt(sessionStorage.getItem('vitorias'))+1);
+                document.getElementById('vitorias').textContent = sessionStorage.getItem('vitorias');
                             reiniciarJogo();
                     }else{
                     if(tentativas === 10){
@@ -43,7 +48,10 @@
                     } else {
                         if(tentativas === 10){
                        alert('Você perdeu! ultrapassou 10 tentativas '); 
-                       reiniciarJogo();}
+                       reiniciarJogo();
+                       sessionStorage.setItem('derrotas', parseInt(sessionStorage.getItem('derrotas'))+1);
+                document.getElementById('derrotas').textContent = sessionStorage.getItem('derrotas');
+                   }
                         setTimeout(function() {
                             carta1.classList.remove('virada');
                             carta2.classList.remove('virada');

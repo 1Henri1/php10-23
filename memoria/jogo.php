@@ -20,7 +20,7 @@
         </h3>
     <h1>Jogo da Memória</h1>
     <div>
-        Tentativas: <span id="tentativas"></span><br>
+        Tentativas: <span id="tentativas">0</span><br>
         vitórias: <span id="vitorias">0</span><br>
         Derrotas: <span id="derrotas">0</span><br>
         <button onclick="reiniciarJogo()">Reiniciar</button>
